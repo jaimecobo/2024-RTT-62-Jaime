@@ -10,5 +10,9 @@ public class JavaBasicsClass {
         System.out.println(sum);
         System.out.println("###################################################################### \n");
 
+
+        /* Write a program that declares two double variables, assigns a number to each, and adds them together.
+           Assign the sum to a variable. Print out the result. */
+
     }
 }
