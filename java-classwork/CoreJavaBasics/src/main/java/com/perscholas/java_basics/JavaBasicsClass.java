@@ -13,6 +13,10 @@ public class JavaBasicsClass {
 
         /* Write a program that declares two double variables, assigns a number to each, and adds them together.
            Assign the sum to a variable. Print out the result. */
+        double dNum1 = 3.14159, dNum2 = 1.618;
+        double dSum= dNum1 + dNum2;
+        System.out.println(dSum);
+        System.out.println("###################################################################### \n");
 
     }
 }
