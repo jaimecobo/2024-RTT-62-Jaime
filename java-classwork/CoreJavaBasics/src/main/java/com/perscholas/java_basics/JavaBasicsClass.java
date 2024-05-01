@@ -21,6 +21,11 @@ public class JavaBasicsClass {
 
         /* Write a program that declares an integer variable and a double variable, assigns numbers to each, and adds them together.
            Assign the sum to a variable. Print out the result. What variable type must the sum be? */
+        int intNum01 = 9;
+        double doubleNum01 = 3.333333333;
+        double intDoubleSum = intNum01 + doubleNum01;
+        System.out.println(intDoubleSum);
+        System.out.println("###################################################################### \n");
 
     }
 }
