@@ -18,5 +18,9 @@ public class JavaBasicsClass {
         System.out.println(dSum);
         System.out.println("###################################################################### \n");
 
+
+        /* Write a program that declares an integer variable and a double variable, assigns numbers to each, and adds them together.
+           Assign the sum to a variable. Print out the result. What variable type must the sum be? */
+
     }
 }
