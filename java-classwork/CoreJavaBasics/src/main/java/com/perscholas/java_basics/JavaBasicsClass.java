@@ -70,5 +70,14 @@ public class JavaBasicsClass {
         System.out.println("###################################################################### \n");
 
 
+        /*
+            Write a program where you create three variables that represent products at a cafe.
+            The products could be beverages like coffee, cappuccino, espresso, green tea, etc. Assign prices to each product.
+            Create two more variables called subtotal and totalSale and complete an “order” for three items of the first product,
+            four items of the second product, and two items of the third product. Add them all together to calculate the subtotal.
+            Create a constant called SALES_TAX and add sales tax to the subtotal to obtain the totalSale amount.
+            Be sure to format the results to two decimal places.
+         */
+
     }
 }
