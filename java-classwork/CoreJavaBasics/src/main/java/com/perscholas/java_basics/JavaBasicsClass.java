@@ -54,6 +54,14 @@ public class JavaBasicsClass {
 
         /* Write a program that declares two integer variables, x and y, and assigns the number 5 to x and the number 6 to y.
            Declare a variable q and assign y/x to it and print q. Now, cast y to a double and assign it to q. Print q again. */
+        int x = 5, y = 6;
+        double q = y / x;
+        System.out.println("q is = " + q);
+        double doubleY = ((double) y);
+        System.out.println("The value of \"y\" cast to double is = " + doubleY);
+        q = doubleY;
+        System.out.println("now q is = " + q);
+        System.out.println("###################################################################### \n");
 
 
     }
