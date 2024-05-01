@@ -78,6 +78,23 @@ public class JavaBasicsClass {
             Create a constant called SALES_TAX and add sales tax to the subtotal to obtain the totalSale amount.
             Be sure to format the results to two decimal places.
          */
+        double coffee = 2.99, cappuccino = 3.99, espresso = 1.99;
+        double subtotal, totalSale;
+        subtotal = (3 * coffee) + (4 * cappuccino) + (2 * espresso);
+        final double SALES_TAX = 0.0825;
+        totalSale = subtotal + (subtotal * SALES_TAX);
+        System.out.println(
+                "3 coffees         = " + 3 * coffee + "\n" +
+                        "4 cappuccinos     = " + 4 * cappuccino + "\n" +
+                        "2 espressos       = " + 2 * espresso + "\n" +
+                        "Subtotal          = " + subtotal + "\n" +
+                        "Sales tax         = " + String.format("%.2f", subtotal * SALES_TAX) + "\n" +
+                        "Total sale        = " + String.format("%.2f", totalSale) + "\n\n" +
+                        "+++++ UNFORMATTED RESULTS +++++ \n" +
+                        "Sales tax         = " + subtotal * SALES_TAX + "\n" +
+                        "Total sale        = " + totalSale
+        );
+        System.out.println("###################################################################### \n");
 
     }
 }
