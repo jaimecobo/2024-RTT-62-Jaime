@@ -44,6 +44,13 @@ public class JavaBasicsClass {
 
         /* Write a program that declares two double variables, assigns a number to each, and divides the larger by the smaller number.
             Assign the result to a variable. Print out the result. Now, cast the result to an integer. Print out the result again. */
+        double doubleNum02 = 33.33;
+        double doubleNum03 = 7.77;
+        double doubleDivision = doubleNum02 / doubleNum03;
+        System.out.println(doubleDivision);
+        System.out.println("doubleDivision value cast to integer = " + ((int) doubleDivision));
+        System.out.println("###################################################################### \n");
+
 
     }
 }
