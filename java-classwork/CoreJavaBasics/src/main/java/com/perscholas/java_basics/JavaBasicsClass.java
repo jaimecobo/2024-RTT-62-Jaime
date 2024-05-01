@@ -65,6 +65,9 @@ public class JavaBasicsClass {
 
 
         /* Write a program that declares a named constant and uses it in a calculation. Print the result. */
+        final byte PERMANENT_NUM = 127;
+        System.out.println("The division of PERMANET_NUM=127 by q=" + q + " is " + PERMANENT_NUM / q);
+        System.out.println("###################################################################### \n");
 
 
     }
