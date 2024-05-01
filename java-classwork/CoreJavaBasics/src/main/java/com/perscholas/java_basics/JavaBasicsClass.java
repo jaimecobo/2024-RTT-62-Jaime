@@ -30,6 +30,16 @@ public class JavaBasicsClass {
 
         /* Write a program that declares two integer variables, assigns an integer to each, and divides the larger number by the smaller number.
            Assign the result to a variable. Print out the result. Now change the larger number to a decimal. What happens? What corrections are needed? */
+        int intNum02 = 28;
+        int intNum03 = 8;
+        int intDiv = intNum02 / intNum03;
+        System.out.println(intDiv);
+        double doubleDiv = intNum02 / intNum03;
+        System.out.println(doubleDiv);
+        doubleDiv = (double)intNum02 / (double)intNum03;
+        System.out.println(doubleDiv);
+        //intNum02 = 28.0;          // Not possible to assign a number with decimal point to a variable declared as integer
+        System.out.println("###################################################################### \n");
 
     }
 }
