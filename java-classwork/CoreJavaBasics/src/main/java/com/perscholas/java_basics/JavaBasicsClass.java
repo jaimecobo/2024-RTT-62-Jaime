@@ -64,5 +64,8 @@ public class JavaBasicsClass {
         System.out.println("###################################################################### \n");
 
 
+        /* Write a program that declares a named constant and uses it in a calculation. Print the result. */
+
+
     }
 }
