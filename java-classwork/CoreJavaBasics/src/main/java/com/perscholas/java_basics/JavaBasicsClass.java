@@ -41,5 +41,9 @@ public class JavaBasicsClass {
         //intNum02 = 28.0;          // Not possible to assign a number with decimal point to a variable declared as integer
         System.out.println("###################################################################### \n");
 
+
+        /* Write a program that declares two double variables, assigns a number to each, and divides the larger by the smaller number.
+            Assign the result to a variable. Print out the result. Now, cast the result to an integer. Print out the result again. */
+
     }
 }
