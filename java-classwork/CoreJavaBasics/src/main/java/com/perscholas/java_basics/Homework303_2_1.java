@@ -1,6 +1,6 @@
 package com.perscholas.java_basics;
 
-public class JavaBasicsClass {
+public class Homework303_2_1 {
     public static void main(String[] args) {
 
         /* Write a program that declares two integer variables, assigns an integer to each, and adds them together.
@@ -14,7 +14,7 @@ public class JavaBasicsClass {
         /* Write a program that declares two double variables, assigns a number to each, and adds them together.
            Assign the sum to a variable. Print out the result. */
         double dNum1 = 3.14159, dNum2 = 1.618;
-        double dSum= dNum1 + dNum2;
+        double dSum = dNum1 + dNum2;
         System.out.println(dSum);
         System.out.println("###################################################################### \n");
 
@@ -36,7 +36,7 @@ public class JavaBasicsClass {
         System.out.println(intDiv);
         double doubleDiv = intNum02 / intNum03;
         System.out.println(doubleDiv);
-        doubleDiv = (double)intNum02 / (double)intNum03;
+        doubleDiv = (double) intNum02 / (double) intNum03;
         System.out.println(doubleDiv);
         //intNum02 = 28.0;          // Not possible to assign a number with decimal point to a variable declared as integer
         System.out.println("###################################################################### \n");
@@ -84,7 +84,7 @@ public class JavaBasicsClass {
         final double SALES_TAX = 0.0825;
         totalSale = subtotal + (subtotal * SALES_TAX);
         System.out.println(
-                "3 coffees         = " + 3 * coffee + "\n" +
+                        "3 coffees         = " + 3 * coffee + "\n" +
                         "4 cappuccinos     = " + 4 * cappuccino + "\n" +
                         "2 espressos       = " + 2 * espresso + "\n" +
                         "Subtotal          = " + subtotal + "\n" +
