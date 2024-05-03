@@ -1,4 +1,4 @@
-package com.perscholas.java_basics;
+package com.perscholas.java_basics.PA_303_2_1;
 
 public class Homework303_2_1 {
     public static void main(String[] args) {
