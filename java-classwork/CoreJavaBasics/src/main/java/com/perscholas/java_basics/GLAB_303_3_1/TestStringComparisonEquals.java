@@ -1,6 +1,6 @@
 package com.perscholas.java_basics.GLAB_303_3_1;
 
-public class TestStringComparison {
+public class TestStringComparisonEquals {
 
     public static void main(String args[]){
         String s1="PerScholas";
@@ -20,7 +20,7 @@ public class TestStringComparison {
         By Using == Operator.
         By compareTo() Method.
 
-    By Using equals() Method
+    -- By Using equals() Method --
     The String class's equals() method compares the original content of the string. It compares the values of strings for equality.
 
      */
