@@ -1,6 +1,6 @@
 package com.perscholas.java_basics.PA_303_2_3;
 
-public class BitwiseLeftShiftOperator {
+public class BitwiseLeftShift {
     public static void main(String[] args) {
         /*
         Write a program that declares an integer a variable x, assigns the value 2 to it,
