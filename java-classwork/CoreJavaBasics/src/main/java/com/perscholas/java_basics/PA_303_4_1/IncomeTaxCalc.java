@@ -49,6 +49,24 @@ public class IncomeTaxCalc {
                             ", your income tax is " + String.format("%.2f", incomeTax));
                 }
 
+            if (status == 2) {
+                if (income <= 16700) {
+                    incomeTax = income * 0.1;
+                } else if (income <= 67900) {
+                    incomeTax = income * 0.15;
+                } else if (income <= 137050) {
+                    incomeTax = income * 0.25;
+                } else if (income <= 208850) {
+                    incomeTax = income * 0.28;
+                } else if (income <= 372950) {
+                    incomeTax = income * 0.33;
+                } else {
+                    incomeTax = income * 0.35;
+                }
+                System.out.println("As Married Filing Jointly or Qualifying Widow(er) with a total income of " + String.format("%.2f", income) +
+                        ", your income tax is " + String.format("%.2f", incomeTax));
+            }
+
         }
     }
 }
