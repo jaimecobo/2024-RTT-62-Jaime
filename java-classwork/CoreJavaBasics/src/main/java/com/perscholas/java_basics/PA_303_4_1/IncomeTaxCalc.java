@@ -30,7 +30,26 @@ public class IncomeTaxCalc {
         if (income < 0) {
             System.out.println("Income can't be negative");
         }
+        else {
+                if (status == 1) {
+                    if (income <= 8350) {
+                        incomeTax = income * 0.1;
+                    } else if (income <= 33950) {
+                        incomeTax = income * 0.15;
+                    } else if (income <= 82250) {
+                        incomeTax = income * 0.25;
+                    } else if (income <= 171550) {
+                        incomeTax = income * 0.28;
+                    } else if (income <= 372950) {
+                        incomeTax = income * 0.33;
+                    } else {
+                        incomeTax = income * 0.35;
+                    }
+                    System.out.println("As single with a total income of " + String.format("%.2f", income) +
+                            ", your income tax is " + String.format("%.2f", incomeTax));
+                }
 
+        }
     }
 }
 
