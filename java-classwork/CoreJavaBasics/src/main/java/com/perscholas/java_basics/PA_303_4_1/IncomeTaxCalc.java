@@ -27,6 +27,9 @@ public class IncomeTaxCalc {
         }
         System.out.println("Enter your total income: ");
         income = sc.nextDouble();
+        if (income < 0) {
+            System.out.println("Income can't be negative");
+        }
 
     }
 }
