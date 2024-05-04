@@ -1,5 +1,7 @@
 package com.perscholas.java_basics.PA_303_3_1;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class JavaStringToken {
@@ -44,7 +46,22 @@ public class JavaStringToken {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         String s = scan.nextLine();
-        // Write your code here.
+        String[] tokens = s.split("[^A-Za-z]");
+
+        int count = 0;
+        for(String token : tokens){
+            if(token.equals("")){
+                count++;
+            }
+        }
+        System.out.println(tokens.length - count);
+
+        for(String token : tokens){
+            if(token.equals("")){
+                continue;
+            }
+            System.out.println(token);
+        }
         scan.close();
     }
 }
