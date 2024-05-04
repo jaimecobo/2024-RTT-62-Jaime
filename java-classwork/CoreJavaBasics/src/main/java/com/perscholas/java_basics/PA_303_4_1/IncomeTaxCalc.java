@@ -22,6 +22,11 @@ public class IncomeTaxCalc {
                 "\n 4) Head of Household");
 
         status = sc.nextInt();
+        if(status < 1 || status > 4) {
+            System.out.println("Invalid status, please exit and try again!");
+        }
+        System.out.println("Enter your total income: ");
+        income = sc.nextDouble();
 
     }
 }
