@@ -85,6 +85,23 @@ public class IncomeTaxCalc {
                         ", your income tax is " + String.format("%.2f", incomeTax));
             }
 
+            if (status == 4) {
+                if (income <= 11950) {
+                    incomeTax = income * 0.1;
+                } else if (income <= 45500) {
+                    incomeTax = income * 0.15;
+                } else if (income <= 117450) {
+                    incomeTax = income * 0.25;
+                } else if (income <= 190200) {
+                    incomeTax = income * 0.28;
+                } else if (income <= 372950) {
+                    incomeTax = income * 0.33;
+                } else {
+                    incomeTax = income * 0.35;
+                }
+                System.out.println("As Head of Household with a total income of " + String.format("%.2f", income) +
+                        ", your income tax is " + String.format("%.2f", incomeTax));
+            }
         }
     }
 }
