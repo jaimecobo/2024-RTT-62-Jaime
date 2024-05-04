@@ -67,6 +67,24 @@ public class IncomeTaxCalc {
                         ", your income tax is " + String.format("%.2f", incomeTax));
             }
 
+            if (status == 3) {
+                if (income <= 8350) {
+                    incomeTax = income * 0.1;
+                } else if (income <= 33950) {
+                    incomeTax = income * 0.15;
+                } else if (income <= 68525) {
+                    incomeTax = income * 0.25;
+                } else if (income <= 104425) {
+                    incomeTax = income * 0.28;
+                } else if (income <= 186475) {
+                    incomeTax = income * 0.33;
+                } else {
+                    incomeTax = income * 0.35;
+                }
+                System.out.println("As Married Filing Separately with a total income of " + String.format("%.2f", income) +
+                        ", your income tax is " + String.format("%.2f", incomeTax));
+            }
+
         }
     }
 }
