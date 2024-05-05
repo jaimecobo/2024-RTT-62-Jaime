@@ -26,5 +26,7 @@ public class FindGreatestCommonDivisor {
                 gcd = i;
             }
         }
+        System.out.println("The Greatest Common Divisor (GCD) of " + n1 + " & " + n2 + " is " + gcd);
+
     }
 }
