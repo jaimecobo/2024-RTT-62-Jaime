@@ -25,5 +25,17 @@ public class MultiplicationTable {
                 System.out.print("_");
             }
         }
+
+        for(int i = 1; i <= 12; i++){
+            System.out.print("| \t");
+
+            for(int j = 1; j <= 13; j++) {
+                if(j <= 12){
+                    System.out.print(i * j + "\t");
+                } else{
+                    System.out.println("|");
+                }
+            }
+        }
     }
 }
