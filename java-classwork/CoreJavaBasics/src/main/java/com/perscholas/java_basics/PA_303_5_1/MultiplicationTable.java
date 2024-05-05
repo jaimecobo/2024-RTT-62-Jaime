@@ -37,5 +37,16 @@ public class MultiplicationTable {
                 }
             }
         }
+
+        System.out.print("|");
+
+        for (int line = 0; line <= 51; line++) {
+            if(line > 50){
+                System.out.println("|");
+            } else{
+                System.out.print("_");
+            }
+        }
+
     }
 }
