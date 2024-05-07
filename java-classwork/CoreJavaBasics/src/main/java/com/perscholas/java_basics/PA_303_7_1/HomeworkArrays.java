@@ -31,4 +31,5 @@ public class HomeworkArrays {
         average = average / numbers.length;
         System.out.println("The average value in the array is: " + average);
     }
+
 }
