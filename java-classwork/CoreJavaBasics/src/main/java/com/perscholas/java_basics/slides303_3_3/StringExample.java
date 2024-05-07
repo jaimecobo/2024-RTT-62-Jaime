@@ -1,4 +1,4 @@
-package com.perscholas.java_basics.slide303_3_3;
+package com.perscholas.java_basics.slides303_3_3;
 
 public class StringExample {
     public static void main(String[] args) {
