@@ -46,7 +46,7 @@ public class JavaSubstringComparison {
         String carrier = s.substring(0,k);
         String smallest = carrier;
         String largest = carrier;
-        for(int i = 1; i < s.length() -k +1; i++) {
+        for(int i=1; i<=s.length()-k; i++) {
             carrier = s.substring(i, i+k);
             smallest = smallest.compareTo(carrier) >= 1 ? carrier: smallest;
             largest = largest.compareTo(carrier) < 0 ? carrier : largest;
