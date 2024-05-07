@@ -1,6 +1,7 @@
 package com.perscholas.java_basics.PA_303_3_1;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -46,7 +47,16 @@ public class JavaStringToken {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         String s = scan.nextLine();
-        String[] tokens = s.split("[^A-Za-z]");
+//        String[] tokens = s.split("[^A-Za-z]");             // Using Array to collect substrings from s.split("[^A-Za-z]"))
+//        String[] tokens = s.split(",");                       // Using Array to collect substrings from s.split(",") -or- s.split("[,]")
+//        String[] tokens = s.split("[\\s,.;'_@?]");          // Using Array to collect substrings from s.split("[\\s?,.;'_@]")
+        // I had to add + sign after[] to mAke it work as expectedUsing Array to collect substrings from s.split("[\\s?,.;'_@]+")
+        String[] tokens = s.split("[\\s,.;'_@?]+");
+
+
+//        List<String> tokens = new ArrayList<>();
+//        tokens = List.of(s.split("[\\s?,.;'_@]"));      // Using ArrayList instead of Array
+
 
         int count = 0;
         for(String token : tokens){
@@ -54,14 +64,35 @@ public class JavaStringToken {
                 count++;
             }
         }
-        System.out.println(tokens.length - count);
 
+        System.out.println(tokens.length - count); // to be used with Array
+//        System.out.println(tokens.size() - count);   // to be used with List
         for(String token : tokens){
             if(token.equals("")){
                 continue;
             }
             System.out.println(token);
         }
+
+        int iterations = 0;
+        System.out.println();
+        System.out.print("[");
+        for(String token : tokens){
+//            if(token.equals("")){
+//                continue;
+//            }
+            System.out.print("\"" + token + "\"");
+            iterations++;
+            if(iterations <= tokens.length - 1){      // to be used with Array
+//            if(iterations <= tokens.size() - 1){        // to be used with List
+                System.out.print(", ");
+            }
+        }
+        System.out.println("] ===> " + tokens.length);    // to be used with Array
+//        System.out.println("] ===> " + tokens.size());      // to be used with List
+
+        System.out.println("tokens array printed out using toString() method: " + Arrays.toString(tokens));
+
         scan.close();
     }
 }
