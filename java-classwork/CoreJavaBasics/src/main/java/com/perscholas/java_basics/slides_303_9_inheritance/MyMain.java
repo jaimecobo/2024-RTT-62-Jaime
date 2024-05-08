@@ -15,6 +15,13 @@ public class MyMain {
 
         shapes.add(c);
 
+        Rectangle r = new Rectangle("ReCtAnGlE");
+        r.setLength(10);
+        r.setWidth(5);
+
+        shapes.add(r);
+
+
         for ( Shape shape : shapes ) {
             System.out.println("The area of " + shape.getName() + " equals " + shape.calculateArea());
         }
