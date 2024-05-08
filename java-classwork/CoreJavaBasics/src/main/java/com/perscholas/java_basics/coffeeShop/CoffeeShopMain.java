@@ -36,4 +36,11 @@ public class CoffeeShopMain {
         }
     }
 
+    // we only have 1 public static void main for the whole coffee shop project
+    // this will be the way the program starts up
+    public static void main(String[] args) {
+        CoffeeShopMain coffeeShopMain = new CoffeeShopMain();
+        coffeeShopMain.runCoffeeShop();
+    }
+
 }
