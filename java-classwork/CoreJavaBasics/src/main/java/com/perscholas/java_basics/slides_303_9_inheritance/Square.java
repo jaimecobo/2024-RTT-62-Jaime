@@ -14,4 +14,5 @@ public class Square extends Shape{
     public void setWidth(int width) {
         this.width = width;
     }
+
 }
