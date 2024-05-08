@@ -30,4 +30,11 @@ public class CoffeeShop {
         products.add(eggSandwich);
     }
 
+    // print the list of products available for sale
+    public void printProducts() {
+        for ( int pos = 0 ; pos < products.size() ; pos++ ) {
+            Product product = products.get(pos);
+            System.out.println((pos+1) + ") " + product.getName() + "\t" + product.getPrice() );
+        }
+    }
 }
