@@ -1,4 +1,4 @@
-package com.perscholas.java_basics.GLAB_303_10_1.ShapeWithAbstractMethods;
+package com.perscholas.java_basics.GLAB_303_10_4.ShapeWithAbstractMethods;
 
 public interface Movable {
     // An interface defines a list of public abstract methods to be implemented by the subclasses

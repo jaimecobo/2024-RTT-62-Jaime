@@ -1,4 +1,4 @@
-package com.perscholas.java_basics.GLAB_303_10_1.ShapeWithAbstractMethods;
+package com.perscholas.java_basics.GLAB_303_10_4.ShapeWithAbstractMethods;
 
 public class myRunner {
     public static void main(String[] args) {
