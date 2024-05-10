@@ -7,6 +7,11 @@ public class Square extends Shape{
         return width * width;
     }
 
+    @Override
+    public double calculatePerimeter() {
+        return 4 * width;
+    }
+
     public int getWidth() {
         return width;
     }
