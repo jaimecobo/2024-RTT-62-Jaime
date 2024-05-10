@@ -23,8 +23,12 @@ public class MyMain {
 
 
         for ( Shape shape : shapes ) {
-            System.out.println("The area of " + shape.getName() + " equals " + shape.calculateArea());
+            System.out.print("The area of " + shape.getName() + " equals " + shape.calculateArea());
+            System.out.println(" and its perimeter is " + shape.calculatePerimeter());
         }
+
+        ArrayList<Shape> pentagon = new ArrayList<>();
+
 
     }
 
