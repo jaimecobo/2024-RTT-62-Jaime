@@ -1,2 +1,5 @@
-package com.perscholas.java_basics.slides_303_9_inheritance;public enum ShapeEnum {
+package com.perscholas.java_basics.slides_303_9_inheritance;
+
+public enum ShapeEnum {
+    CIRCLE,TRIANGLE, SQUARE,RECTANGLE;
 }
