@@ -1,8 +1,16 @@
 package com.perscholas.java_basics.slides_303_9_inheritance;
-public class Shape {
-    public static double area;
 
+//public class ShapeAbstract {
+public abstract class Shape implements Perimeter{
+
+    public static double area;
     private String name;
+
+    // Abstract method has no implementation
+    public abstract double calculateArea();       // if ShapeAbstract is not abstract and does not override abstract method calculateArea()
+//    public double calculateArea(){
+//        return 0;
+//    };
 
     public Shape() {
 
@@ -16,10 +24,6 @@ public class Shape {
         System.out.println("The name of the shape is " + name);
     }
 
-    //public abstract double calculateArea();       Shape is not abstract and does not override abstract method calculateArea()
-    public double calculateArea(){
-        return 0;
-    };
 
     public String getName() {
         return name;
