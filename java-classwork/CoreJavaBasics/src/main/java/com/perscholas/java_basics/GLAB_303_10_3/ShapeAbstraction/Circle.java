@@ -1,4 +1,4 @@
-package com.perscholas.java_basics.GLAB_303_10_1.ShapeAbstraction;
+package com.perscholas.java_basics.GLAB_303_10_3.ShapeAbstraction;
 
 public class Circle extends ShapeAbstract {
     protected double radius;
