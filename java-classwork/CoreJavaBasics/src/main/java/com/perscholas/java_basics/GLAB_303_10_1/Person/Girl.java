@@ -1,4 +1,4 @@
-package com.perscholas.java_basics.GLAB_303_10_1;
+package com.perscholas.java_basics.GLAB_303_10_1.Person;
 
 public class Girl  extends Person{
     static double   ageFactor = 1.3;

@@ -1,4 +1,4 @@
-package com.perscholas.java_basics.GLAB_303_10_1.Shape.Abstraction;
+package com.perscholas.java_basics.GLAB_303_10_1.ShapeAbstraction;
 
 public abstract class ShapeAbstract {
     protected String color;
