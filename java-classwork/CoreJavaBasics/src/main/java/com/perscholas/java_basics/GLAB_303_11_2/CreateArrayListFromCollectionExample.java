@@ -32,6 +32,7 @@ public class CreateArrayListFromCollectionExample {
 
         System.out.println(firstTenPrimeNumbers);
     }
+
 }
 
 
