@@ -22,6 +22,10 @@ Remember: HashSet DOES NOT maintain any order, so this order might be changed if
         //Addition of null values
         hset.add(null);
         hset.add(null);
+// Using advanced for loop
+        for (String str : hset) {
+            System.out.println(" ---> " + str);
+        }
     }
 
 }
