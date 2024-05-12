@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AccessElementsFromArrayListExample {
+/*
+Accessing Elements from an ArrayList
+This example shows:
+The use of the isEmpty() method to check if an ArrayList is empty.
+The use of the size() method to find the size of an ArrayList.
+The use of the get() method to access an element at a particular index in an ArrayList.
+The use of the set() method to modify the element at a particular index in an ArrayList.
+*/
     public static void main(String[] args) {
         List<String> topCompanies = new ArrayList<>();
 
