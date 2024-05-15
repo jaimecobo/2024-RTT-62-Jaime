@@ -45,5 +45,4 @@ public class TreeSet_CitiesComparator implements Comparator<String> {
         //print the contents of TreeSet
         System.out.println("TreeSet: " + cities);
     }
-
 }
