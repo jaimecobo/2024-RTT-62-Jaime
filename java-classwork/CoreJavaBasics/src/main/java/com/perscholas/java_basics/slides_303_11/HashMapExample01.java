@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class HashMapExample {
+public class HashMapExample01 {
     public static void main(String[] args) {
         List<String> stringList = new ArrayList<String>();
 
