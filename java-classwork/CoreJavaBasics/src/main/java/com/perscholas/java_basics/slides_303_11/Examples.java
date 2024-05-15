@@ -2,7 +2,7 @@ package com.perscholas.java_basics.slides_303_11;
 
 import java.util.*;
 
-public class Examples {
+public class Examples<T> {
     public void setSomething(T variableName) {
 
     }
@@ -19,7 +19,7 @@ public class Examples {
             System.out.println(i);
         }
 
-        Example<String> e = new Examples();
+        Examples<String> e = new Examples();
         e.setSomething("String");
 
         Examples<Integer> e1 = new Examples();
