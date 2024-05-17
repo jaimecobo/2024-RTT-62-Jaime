@@ -10,7 +10,7 @@ public class Product {
 
     // constructor with no args - by default this is included with the java language
     public Product() {
-        System.out.println("No args constructor called");
+//        System.out.println("No args constructor called");
     }
 
     // constructor with all args
