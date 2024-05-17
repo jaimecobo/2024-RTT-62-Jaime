@@ -13,13 +13,13 @@ public class ProductReader01 {
                 FileReader reader = new FileReader(file);
                 BufferedReader bufferedReader = new BufferedReader(reader);
 
-//                String header = bufferedReader.readLine();
-//                String product = bufferedReader.readLine();
-//
-//                System.out.println(header);
-//                System.out.println(product);
-//
-//                Product product1 = parseProduct(product);
+                String header = bufferedReader.readLine();
+                String product = bufferedReader.readLine();
+
+                System.out.println(header);
+                System.out.println(product);
+
+                Product product1 = parseProduct(product);
 
 
 
