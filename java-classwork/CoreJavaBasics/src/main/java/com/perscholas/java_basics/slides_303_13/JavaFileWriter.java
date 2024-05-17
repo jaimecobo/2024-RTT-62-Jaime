@@ -35,6 +35,5 @@ public class JavaFileWriter {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }
