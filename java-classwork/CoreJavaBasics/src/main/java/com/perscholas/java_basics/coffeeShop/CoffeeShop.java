@@ -28,7 +28,13 @@ public class CoffeeShop {
 
         Product eggSandwich = new Product(7.89, "Egg Sandwich", false, 50);
         products.add(eggSandwich);
-    }
+
+        // Builds the menu of products for sale at the coffee shop, creating a list of products from products.csv file
+            ProductReader02 pr = new ProductReader02();
+            List<Product> productsFromFile = pr.readProducts();
+            products.addAll(productsFromFile);
+
+        }
 
     // print the list of products available for sale
     public void printProducts() {
