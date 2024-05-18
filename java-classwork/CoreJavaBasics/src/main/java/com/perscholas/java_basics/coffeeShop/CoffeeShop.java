@@ -2,6 +2,7 @@ package com.perscholas.java_basics.coffeeShop;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CoffeeShop {
     private List<Product> products = new ArrayList<>();
@@ -35,6 +36,13 @@ public class CoffeeShop {
             products.addAll(productsFromFile);
 
         }
+
+    public void printProductsUnder3() {
+        // this code filters all products that are less than 3$
+        List<Product> cheapProducts = products.stream().filter(product -> product.getPrice() < 3).collect(Collectors.toList());
+        // this code prints each of the products that is less than 3$
+        cheapProducts.forEach(product -> System.out.println(product.getName() + "\t" + product.getPrice()));
+    }
 
     // print the list of products available for sale
     public void printProducts() {
