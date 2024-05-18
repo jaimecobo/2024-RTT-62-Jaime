@@ -11,8 +11,9 @@ public class CoffeeShopMain {
         System.out.println();
         System.out.println("0) Exit");
         System.out.println("1) Print the list of products");
-        System.out.println("2) Order a product");
-        System.out.println("3) Checkout");
+        System.out.println("2) Print the list of products under $3");
+        System.out.println("4) Order a product");
+        System.out.println("5) Checkout");
 
         System.out.print("Enter your choice ");
         int option = scanner.nextInt();
@@ -23,7 +24,7 @@ public class CoffeeShopMain {
     public void runCoffeeShop() {
         coffeeShop = new CoffeeShop();
         coffeeShop.initProducts();
-        coffeeShop.printProducts();
+//        coffeeShop.printProducts();
 
         while(true) {
             boolean value = true;
@@ -33,6 +34,8 @@ public class CoffeeShopMain {
                 System.exit(0);
             } else if ( option == 1 ) {
                 coffeeShop.printProducts();
+            }else if( option == 2 ) {
+                coffeeShop.printProductsUnder3();
             }
         }
     }
