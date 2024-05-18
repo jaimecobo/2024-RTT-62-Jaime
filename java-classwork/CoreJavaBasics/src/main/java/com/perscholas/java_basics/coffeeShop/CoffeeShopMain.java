@@ -12,6 +12,7 @@ public class CoffeeShopMain {
         System.out.println("0) Exit");
         System.out.println("1) Print the list of products");
         System.out.println("2) Print the list of products under $3");
+        System.out.println("3) Print the list of products under $4");
         System.out.println("4) Order a product");
         System.out.println("5) Checkout");
 
@@ -36,6 +37,8 @@ public class CoffeeShopMain {
                 coffeeShop.printProducts();
             }else if( option == 2 ) {
                 coffeeShop.printProductsUnder3();
+            }else if( option == 3 ) {
+                coffeeShop.printProductsUnder4();
             }
         }
     }
