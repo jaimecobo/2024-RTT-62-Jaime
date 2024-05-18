@@ -44,6 +44,19 @@ public class CoffeeShop {
         cheapProducts.forEach(product -> System.out.println(product.getName() + "\t" + product.getPrice()));
     }
 
+    public void printProductsUnder4() {
+        // the same 2 lines the code above written as a for loop
+        int count = 1;
+        for ( Product product : products ) {
+            if ( product.getPrice() < 4 ) {
+                System.out.println(count + ") " + product.getName() + "\t" + product.getPrice());
+                    count++;
+            }
+        }
+    }
+
+
+
     // print the list of products available for sale
     public void printProducts() {
         for ( int pos = 0 ; pos < products.size() ; pos++ ) {
