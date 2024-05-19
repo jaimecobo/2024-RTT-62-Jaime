@@ -1,4 +1,4 @@
-package com.perscholas.java_basics.PA_;
+package com.perscholas.java_basics.PA_303_14_1;
 
 import java.util.Scanner;
 import java.util.function.Function;
@@ -14,14 +14,12 @@ Complete a lambda expression greet that takes a string and returns "Hello, STRIN
         String inputString = scanner.nextLine();
 
         Function<String, String> removeDigits = s -> s.replaceAll("\\d", "");
+        Function<String, String> introduce = str -> "This is my friend " + str + ".";
+        Function<String, String> greet = str -> "Hello, " + str + "!";
+
         String name = removeDigits.apply(inputString);
 //        System.out.println(name);
-
-        Function<String, String> introduce = s -> "This is my friend " + name + ".";
-
-        Function<String, String> greet = str -> "Hello, " + name + "!";
-
-        System.out.println(introduce.apply(inputString));
-        System.out.println(greet.apply(inputString));
+        System.out.println(introduce.apply(name));
+        System.out.println(greet.apply(name));
     }
 }
