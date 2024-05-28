@@ -3,30 +3,33 @@
 -- I want to see the count of the number of products in each product line
 
 -- question 0.2
--- I want to see a list of employees and all of the customers for that employee.   Employee name will be duplicated in the result set.   I want to see the employee first and last name
+-- I want to see a list of employees and all of the customers for that employee.   Employee name will be duplicated in the result set.
+-- I want to see the employee first and last name
 -- and the customer contact first and last name as well as the customer name
 
 -- question 0.3
 -- I want to see a list of employees in each office.   Show the office name and the employee name
 
 -- question 0.4
--- I want to see the totaly number of each employee type based on job title.. result should the job title and the number of employess with that job title.
+-- I want to see the total number of each employee type based on job title.
+-- result should the job title and the number of employess with that job title.
 
 -- question 0.5
--- I want to see a list of all payments each customer has made.  Order the list by custoemr name ascending, then by the payment amount descending
+-- I want to see a list of all payments each customer has made.
+-- Order the list by customer name ascending, then by the payment amount descending
 
 -- question 0.6
 -- I want to see a list of products that have never been sold.   use ... not in ( select product_id from order_details ) in your where clause
-select * from products where id not in ( select product_id from orderdetails );
 
 -- question 0.7
--- are there any customers that have never made an order
+-- Are there any customers that have never made an order
 
 -- Question 1
 -- How many customer are handled by each office.  I want to see the office name and the count of the number of customers in that office.
 
 -- Question 2
--- I want to see the products with the most margin at the top of the table.  Include the product name, buy price, msrp, and margin in the results.  Margin is calculated (MSPR - buy_price)
+-- I want to see the products with the most margin at the top of the table.
+-- Include the product name, buy price, msrp, and margin in the results.  Margin is calculated (MSPR - buy_price)
 
 -- Question 2.5
 -- I want to see the top 5 customers in each state based on margin
