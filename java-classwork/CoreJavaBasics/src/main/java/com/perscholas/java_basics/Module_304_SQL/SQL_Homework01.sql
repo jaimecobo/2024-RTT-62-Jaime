@@ -16,6 +16,12 @@ GROUP BY pl.product_line;
 -- I want to see a list of employees and all of the customers for that employee.   Employee name will be duplicated in the result set.
 -- I want to see the employee first and last name
 -- and the customer contact first and last name as well as the customer name
+SELECT CONCAT(e.firstname, ' ', + e.lastname) AS Employee,
+       CONCAT(c.contact_firstname, ' ', c.contact_lastname, ' (', c.customer_name, ')') AS Customer
+FROM employees e, customers c
+WHERE e.id = c.sales_rep_employee_id
+ORDER BY Employee;
+
 
 -- question 0.3
 -- I want to see a list of employees in each office.   Show the office name and the employee name
