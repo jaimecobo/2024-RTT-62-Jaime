@@ -65,6 +65,10 @@ NOT IN (SELECT customer_id FROM payments);
 
 -- Question 1
 -- How many customer are handled by each office.  I want to see the office name and the count of the number of customers in that office.
+SELECT o.city AS Office, COUNT(c.customer_name) AS Num_Customers
+FROM offices o, employees e, customers c
+WHERE o.id = e.office_id AND e.id = c.sales_rep_employee_id
+GROUP BY Office;
 
 -- Question 2
 -- I want to see the products with the most margin at the top of the table.
