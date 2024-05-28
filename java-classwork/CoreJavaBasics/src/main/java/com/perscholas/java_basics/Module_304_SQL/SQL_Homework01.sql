@@ -58,6 +58,10 @@ NOT IN ( SELECT product_id FROM orderdetails );
 
 -- question 0.7
 -- Are there any customers that have never made an order
+SELECT DISTINCT customer_name
+FROM customers
+WHERE id
+NOT IN (SELECT customer_id FROM payments);
 
 -- Question 1
 -- How many customer are handled by each office.  I want to see the office name and the count of the number of customers in that office.
