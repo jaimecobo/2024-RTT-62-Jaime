@@ -42,6 +42,11 @@ GROUP By job_title;
 -- question 0.5
 -- I want to see a list of all payments each customer has made.
 -- Order the list by customer name ascending, then by the payment amount descending
+SELECT c.customer_name AS Customer, p.amount AS Payments
+FROM customers c, payments p
+WHERE c.id = p.customer_id
+ORDER BY Customer, Payments DESC;
+
 
 -- question 0.6
 -- I want to see a list of products that have never been sold.   use ... not in ( select product_id from order_details ) in your where clause
