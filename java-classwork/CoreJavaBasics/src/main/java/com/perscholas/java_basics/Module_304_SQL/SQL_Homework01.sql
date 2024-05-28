@@ -25,6 +25,11 @@ ORDER BY Employee;
 
 -- question 0.3
 -- I want to see a list of employees in each office.   Show the office name and the employee name
+SELECT o.city AS Office, CONCAT(e.firstname, ' ', + e.lastname) AS Employee
+FROM offices o, employees e
+WHERE o.id = e.office_id
+ORDER BY Office;
+
 
 -- question 0.4
 -- I want to see the total number of each employee type based on job title.
