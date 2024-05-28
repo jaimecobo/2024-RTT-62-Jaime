@@ -50,6 +50,11 @@ ORDER BY Customer, Payments DESC;
 
 -- question 0.6
 -- I want to see a list of products that have never been sold.   use ... not in ( select product_id from order_details ) in your where clause
+SELECT product_name
+FROM products
+WHERE id
+NOT IN ( SELECT product_id FROM orderdetails );
+
 
 -- question 0.7
 -- Are there any customers that have never made an order
