@@ -150,10 +150,10 @@ ORDER BY Month;
 -- I want to see the top 5 products based on quantity sold across all orders
 
 -- question 7.5
--- how many times has each product appeared in an order reguardless of how many were purchased.
+-- how many times has each product appeared in an order regardless of how many were purchased.
 
 -- question 7.6
--- how many products would be out of stock baed on the amount sold acrosss tiem.  -- not sure if the data will spoort this .. basically
+-- how many products would be out of stock based on the amount sold across time.  -- not sure if the data will sport this .. basically
 -- looking for any product where the sum of the quantity sold is greater than the quantity in stock
 
 -- question 7.9
