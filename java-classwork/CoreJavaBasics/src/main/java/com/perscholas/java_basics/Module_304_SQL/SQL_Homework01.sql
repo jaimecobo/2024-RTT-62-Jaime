@@ -6,6 +6,12 @@ FROM products p, productlines pl
 WHERE p.productline_id = pl.id
 GROUP BY p.productline_id;
 
+SELECT pl.product_line, COUNT(*) AS product_count
+FROM products p, productlines pl
+WHERE p.productline_id = pl.id
+GROUP BY pl.product_line;
+
+
 -- question 0.2
 -- I want to see a list of employees and all of the customers for that employee.   Employee name will be duplicated in the result set.
 -- I want to see the employee first and last name
