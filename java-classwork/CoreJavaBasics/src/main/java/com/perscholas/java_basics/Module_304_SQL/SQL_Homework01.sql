@@ -112,6 +112,13 @@ WHERE rows_count <= 5;
 
 -- Question 3
 --  I want to see the top 5 salesmen in the company based on the total amount sold
+SELECT CONCAT(firstname, ' ', + lastname) AS Employee, SUM(pay.amount) total_sales
+FROM employees e, customers c, payments pay
+WHERE e.id = c.sales_rep_employee_id
+  AND c.id = pay.customer_id
+GROUP BY e.id
+ORDER BY total_sales DESC
+LIMIT 5;
 
 -- Question 4
 -- I want to see the top 5 salesmen based on overall profit (margin)
