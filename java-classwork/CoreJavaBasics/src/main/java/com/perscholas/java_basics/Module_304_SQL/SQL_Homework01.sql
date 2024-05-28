@@ -95,6 +95,21 @@ FROM ( SELECT  c.customer_name, c.state, SUM(od.quantity_ordered * (p.msrp - p.b
 WHERE rows_count <= 5;
 
 
+SELECT customer_name, state, profit_margin
+FROM ( SELECT  c.customer_name, c.state, SUM(od.quantity_ordered * (p.msrp - p.buy_price)) AS profit_margin,
+               (ROW_NUMBER() OVER (PARTITION BY state ORDER BY SUM(p.msrp - p.buy_price) DESC)) AS rows_count
+       FROM customers c
+                INNER JOIN orders o ON c.id = o.customer_id
+                INNER JOIN orderdetails od ON o.id = od.order_id
+                INNER JOIN products p ON p.id = od.product_id
+       WHERE c.state IS NOT NULL
+         AND c.country = 'USA'
+       GROUP BY c.id , c.state
+       ORDER BY c.state , profit_margin DESC
+     ) AS SubQuery
+WHERE rows_count <= 5;
+
+
 -- Question 3
 --  I want to see the top 5 salesmen in the company based on the total amount sold
 
