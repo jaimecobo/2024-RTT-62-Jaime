@@ -122,6 +122,16 @@ LIMIT 5;
 
 -- Question 4
 -- I want to see the top 5 salesmen based on overall profit (margin)
+SELECT CONCAT(firstname, ' ', + lastname) AS Employee, SUM(od.quantity_ordered * (p.msrp - p.buy_price)) Margin
+FROM employees e, customers c, orders o, orderdetails od, products p
+WHERE e.id = c.sales_rep_employee_id
+  AND c.id = o.customer_id
+  AND o.id = od.order_id
+  AND od.product_id = p.id
+GROUP BY e.id
+ORDER BY Margin DESC
+LIMIT 5;
+
 
 -- Question 5
 -- I want to see all of the orders that happened in 2004.   You can use a function called year(order_date) = 2004
