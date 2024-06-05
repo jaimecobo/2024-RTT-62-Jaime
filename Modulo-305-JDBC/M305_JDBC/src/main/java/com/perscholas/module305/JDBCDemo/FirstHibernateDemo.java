@@ -22,6 +22,7 @@ public class FirstHibernateDemo {
 //        searchByFirstname(employeeDAO, "Leslie");
 //        searchByLastname(employeeDAO, "Doe");
 //        createEmployee(employeeDAO);
+        searchById(employeeDAO, 1716);
 
     }
 
