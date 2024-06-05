@@ -70,6 +70,8 @@ public class CustomerHibernateDemo {
         customer .setContactFirstname(firstname);
         customer.setContactLastname(lastname);
 
+        customerDAO.update(customer);
+
     }
 
 }
