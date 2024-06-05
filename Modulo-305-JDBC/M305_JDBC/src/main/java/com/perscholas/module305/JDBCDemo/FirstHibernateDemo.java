@@ -13,6 +13,8 @@ public class FirstHibernateDemo {
         for(Employee employee : employees){
             System.out.println(employee.getId() + " | " + employee.getFirstname() + " | " + employee.getLastname() + " | " +
                     employee.getEmail() + " | " + employee.getJobTitle());
+            // After adding @ToString annotation in Employee Class it is possible to print out easily
+            System.out.println(employee);
         }
 
     }
