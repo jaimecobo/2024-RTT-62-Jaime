@@ -66,6 +66,10 @@ public class CustomerHibernateDemo {
         System.out.println("Please enter the lastname of the customer");
         String lastname = scanner.nextLine();
 
+        customer = customerDAO.findById(id);
+        customer .setContactFirstname(firstname);
+        customer.setContactLastname(lastname);
+
     }
 
 }
