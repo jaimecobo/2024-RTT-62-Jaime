@@ -20,7 +20,7 @@ public class FirstHibernateDemo {
 
 
 //        searchByFirstname(employeeDAO, "Leslie");
-        searchByLastname(employeeDAO, "Doe");
+//        searchByLastname(employeeDAO, "Doe");
 
     }
 
