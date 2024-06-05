@@ -9,7 +9,7 @@ public class CustomerHibernateDemo {
 
     public static void main(String[] args) {
         CustomerDAO customerDAO = new CustomerDAO();
-        createCustomer(customerDAO);
+//        createCustomer(customerDAO);
 
     }
 
@@ -36,6 +36,13 @@ public class CustomerHibernateDemo {
         for(Customer customer : customerList){
             System.out.println(customer);
         }
+
+    }
+
+
+    public static void searchByName(String name){
+        CustomerDAO customerDAO = new CustomerDAO();
+        System.out.println(customerDAO.findByCustomerName(name));
 
     }
 
