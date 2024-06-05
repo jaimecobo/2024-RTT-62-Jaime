@@ -18,6 +18,9 @@ public class FirstHibernateDemo {
 //            System.out.println(employee);
 //        }
 
+
+        searchByFirstname(employeeDAO, "Leslie");
+
     }
 
     public static void searchByFirstname(EmployeeDAO employeeDAO, String firstname) {
