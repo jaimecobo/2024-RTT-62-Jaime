@@ -43,4 +43,24 @@ public class FirstHibernateDemo {
 
     }
 
+
+        public static void createEmployee(EmployeeDAO employeeDAO){
+        // Let's create a new employee in the database
+        Employee newEmployee = new Employee();
+        newEmployee.setFirstname("Yoda");
+        newEmployee.setLastname("Jedi");
+        newEmployee.setOfficeId(1);
+        newEmployee.setExtension("x8080");
+        newEmployee.setEmail("yoda@classic_models.com");
+        newEmployee.setJobTitle("Master Jedi");
+        newEmployee.setVacationHours(0);
+
+        employeeDAO.insert(newEmployee);
+
+        List<Employee> employeesList = employeeDAO.findByLastName("Jedi");
+        for(Employee employee : employeesList){
+            System.out.println(employee);
+        }
+    }
+
 }
