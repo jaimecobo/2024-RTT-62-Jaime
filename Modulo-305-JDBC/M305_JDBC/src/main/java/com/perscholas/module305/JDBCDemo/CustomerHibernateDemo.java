@@ -1,6 +1,9 @@
 package com.perscholas.module305.JDBCDemo;
 
 import com.perscholas.module305.JDBCDemo.database.dao.CustomerDAO;
+import com.perscholas.module305.JDBCDemo.database.entity.Customer;
+
+import java.util.List;
 
 public class CustomerHibernateDemo {
 
