@@ -10,7 +10,7 @@ public class CustomerHibernateDemo {
     public static void main(String[] args) {
         CustomerDAO customerDAO = new CustomerDAO();
 //        createCustomer(customerDAO);
-//        searchByName("Per Scholas");
+        searchByName("Per Scholas");
 //        searchById(520);
 
     }
