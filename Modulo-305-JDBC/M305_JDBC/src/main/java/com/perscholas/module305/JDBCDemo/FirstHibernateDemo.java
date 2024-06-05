@@ -10,12 +10,21 @@ public class FirstHibernateDemo {
         EmployeeDAO employeeDAO = new EmployeeDAO();
 
 //        List<Employee> employees = employeeDAO.findByFirstName("Leslie");
-        List<Employee> employees = employeeDAO.findByLastName("Doe");
+//        List<Employee> employees = employeeDAO.findByLastName("Doe");
+//        for(Employee employee : employees){
+//            System.out.println(employee.getId() + " | " + employee.getFirstname() + " | " + employee.getLastname() + " | " +
+//                    employee.getEmail() + " | " + employee.getJobTitle());
+            // After adding @ToString annotation in Employee Class it is possible to print out easily
+//            System.out.println(employee);
+//        }
+
+    }
+
+    public static void searchByFirstname(EmployeeDAO employeeDAO, String firstname) {
+        List<Employee> employees = employeeDAO.findByFirstName(firstname);
         for(Employee employee : employees){
             System.out.println(employee.getId() + " | " + employee.getFirstname() + " | " + employee.getLastname() + " | " +
                     employee.getEmail() + " | " + employee.getJobTitle());
-            // After adding @ToString annotation in Employee Class it is possible to print out easily
-            System.out.println(employee);
         }
 
     }
