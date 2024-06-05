@@ -9,8 +9,8 @@ public class CustomerHibernateDemo {
 
     public static void main(String[] args) {
         CustomerDAO customerDAO = new CustomerDAO();
-//        createCustomer(customerDAO);
-        searchByName("Per Scholas");
+        createCustomer(customerDAO);
+//        searchByName("Per Scholas");
 //        searchById(520);
 
     }
