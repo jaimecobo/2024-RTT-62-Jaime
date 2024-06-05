@@ -14,6 +14,8 @@ public class CustomerHibernateDemo {
 //        searchByName("Per Scholas");
 //        searchById(520);
 
+        modifyCustomerById(customerDAO, 520);
+
     }
 
 
