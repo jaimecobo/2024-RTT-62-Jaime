@@ -57,6 +57,7 @@ public class CustomerHibernateDemo {
 
 
     public static void modifyCustomerById(CustomerDAO customerDAO, int id){
+        Customer customer = new Customer();
 
     }
 
