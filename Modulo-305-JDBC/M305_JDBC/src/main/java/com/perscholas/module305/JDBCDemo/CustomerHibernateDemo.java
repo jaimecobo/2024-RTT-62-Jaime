@@ -9,7 +9,7 @@ public class CustomerHibernateDemo {
 
     public static void main(String[] args) {
         CustomerDAO customerDAO = new CustomerDAO();
-        createCustomer(customerDAO);
+//        createCustomer(customerDAO);
 //        searchByName("Per Scholas");
 //        searchById(520);
 
@@ -52,6 +52,11 @@ public class CustomerHibernateDemo {
     public static void searchByName(String name){
         CustomerDAO customerDAO = new CustomerDAO();
         System.out.println(customerDAO.findByCustomerName(name));
+
+    }
+
+
+    public static void modifyCustomerById(CustomerDAO customerDAO, int id){
 
     }
 
