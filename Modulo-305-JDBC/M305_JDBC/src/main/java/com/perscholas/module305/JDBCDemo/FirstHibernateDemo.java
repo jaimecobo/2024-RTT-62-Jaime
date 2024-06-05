@@ -64,4 +64,10 @@ public class FirstHibernateDemo {
         }
     }
 
+
+    public static void searchById(EmployeeDAO employeeDAO, int id){
+        Employee employee = employeeDAO.findById(id);
+            System.out.println(employee);
+
+    }
 }
