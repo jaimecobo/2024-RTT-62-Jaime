@@ -28,6 +28,7 @@ public class FirstHibernateDemo {
 
     public static void searchByFirstname(EmployeeDAO employeeDAO, String firstname) {
         List<Employee> employees = employeeDAO.findByFirstName(firstname);
+
         for(Employee employee : employees){
             System.out.println(employee.getId() + " | " + employee.getFirstname() + " | " + employee.getLastname() + " | " +
                     employee.getEmail() + " | " + employee.getJobTitle());
