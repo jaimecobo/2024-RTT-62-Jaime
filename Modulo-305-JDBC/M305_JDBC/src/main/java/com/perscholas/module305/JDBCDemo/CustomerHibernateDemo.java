@@ -59,6 +59,12 @@ public class CustomerHibernateDemo {
     public static void modifyCustomerById(CustomerDAO customerDAO, int id){
         Customer customer = new Customer();
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter the firstname of the customer");
+        String firstname = scanner.nextLine();
+        System.out.println("Please enter the lastname of the customer");
+        String lastname = scanner.nextLine();
+
     }
 
 }
