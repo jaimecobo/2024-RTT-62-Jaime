@@ -135,7 +135,6 @@ LIMIT 5;
 
 -- Question 5
 -- I want to see all of the orders that happened in 2004.   You can use a function called year(order_date) = 2004
-
 SELECT MONTH(o.order_date) AS Month, YEAR(o.order_date) AS Year, p.product_name, od.price_each
 FROM orders o, orderdetails od, products p
 WHERE o.id = od.order_id
