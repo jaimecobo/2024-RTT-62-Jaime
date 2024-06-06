@@ -1,7 +1,9 @@
 package com.perscholas.module305.JDBCDemo;
 
 import com.perscholas.module305.JDBCDemo.database.dao.CustomerDAO;
+import com.perscholas.module305.JDBCDemo.database.dao.OrderDAO;
 import com.perscholas.module305.JDBCDemo.database.entity.Customer;
+import com.perscholas.module305.JDBCDemo.database.entity.Order;
 
 import java.util.List;
 import java.util.Scanner;
@@ -14,13 +16,15 @@ public class CustomerHibernateDemo {
 //        searchByName("Per Scholas");
 //        searchById(520);
 
-        modifyCustomerById(customerDAO, 520);
+//        modifyCustomerById(customerDAO, 520);
+
+//        printOrdersByCustomerId();
 
     }
 
 
     public static void createCustomer(CustomerDAO customerDAO){
-        // Let's create a new employee in the database
+        // Let's create a new customer in the database
         Customer newCustomer = new Customer();
         newCustomer.setCustomerName("Per Scholas");
         newCustomer.setContactFirstname("Eric");
@@ -73,6 +77,23 @@ public class CustomerHibernateDemo {
         customer.setContactLastname(lastname);
 
         customerDAO.update(customer);
+
+    }
+
+
+    public static void printOrdersByCustomerId(){
+        OrderDAO orderDAO = new OrderDAO();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter the customer ID, to print out their orders: ");
+        int customerId = scanner.nextInt();
+//        System.out.println(orderDAO.findOrdersByCustomerId(customerId));
+        List<Order> orders = orderDAO.findOrdersByCustomerId(customerId);
+        System.out.println(" Order id \t|\t Order date \t|\t Required date \t|\t Shipped date \t|\t Status \t|\t Comments" );
+        System.out.println("=========================================================================================================");
+        for(Order order : orders){
+            System.out.println("\t" + order.getId() + " \t|\t " + order.getOrderDate() + " \t|\t " + order.getRequiredDate()  + " \t|\t " +
+                    order.getShippedDate()  + " \t|\t " + order.getStatus() + " \t|\t " + order.getComments());
+        }
 
     }
 
