@@ -8,7 +8,7 @@ import com.perscholas.module305.JDBCDemo.database.entity.Order;
 import java.util.List;
 import java.util.Scanner;
 
-public class CustomerHibernateDemo {
+public class CustomerHibernateMain {
 
     public static void main(String[] args) {
         CustomerDAO customerDAO = new CustomerDAO();
@@ -17,8 +17,6 @@ public class CustomerHibernateDemo {
 //        searchById(520);
 
 //        modifyCustomerById(customerDAO, 520);
-
-//        printOrdersByCustomerId();
 
     }
 
@@ -77,23 +75,6 @@ public class CustomerHibernateDemo {
         customer.setContactLastname(lastname);
 
         customerDAO.update(customer);
-
-    }
-
-
-    public static void printOrdersByCustomerId(){
-        OrderDAO orderDAO = new OrderDAO();
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter the customer ID, to print out their orders: ");
-        int customerId = scanner.nextInt();
-//        System.out.println(orderDAO.findOrdersByCustomerId(customerId));
-        List<Order> orders = orderDAO.findOrdersByCustomerId(customerId);
-        System.out.println(" Order id \t|\t Order date \t|\t Required date \t|\t Shipped date \t|\t Status \t|\t Comments" );
-        System.out.println("=========================================================================================================");
-        for(Order order : orders){
-            System.out.println("\t" + order.getId() + " \t|\t " + order.getOrderDate() + " \t|\t " + order.getRequiredDate()  + " \t|\t " +
-                    order.getShippedDate()  + " \t|\t " + order.getStatus() + " \t|\t " + order.getComments());
-        }
 
     }
 
