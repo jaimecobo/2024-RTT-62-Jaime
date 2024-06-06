@@ -19,7 +19,12 @@ public class Order {
     @Column(name = "id", nullable = false)
     private Integer id;
 
-    @Column(name = "customer_id", nullable = false)
+    @ToString.Exclude
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "customer_id", nullable = false)
+    private  Customer customer;
+
+    @Column(name = "customer_id", nullable = false, insertable = false, updatable = false)
     private Integer customerId;
 
     @Column(name = "order_date", nullable = false)
