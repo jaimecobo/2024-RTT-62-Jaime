@@ -3,6 +3,8 @@ package com.perscholas.module305.JDBCDemo.database.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Setter
 @Getter
 @ToString
@@ -16,6 +18,10 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
+
+    @ToString.Exclude
+    @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Order> orders;
 
     @Column(name = "customer_name", nullable = false)
     private String customerName;
@@ -47,7 +53,19 @@ public class Customer {
     @Column(name = "country", nullable = false)
     private  String country;
 
-    @Column(name = "sales_rep_employee_id")
+    @ToString.Exclude
+    @ManyToOne(fetch = FetchType.LAZY, optional = true)
+    @JoinColumn(name = "sales_rep_employee_id", nullable = true)
+    private  Employee employee;
+
+    /*
+    Example from: https://attacomsian.com/blog/spring-data-jpa-one-to-many-mapping
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "book_id", nullable = false)
+    private Book book;
+     */
+
+    @Column(name = "sales_rep_employee_id", insertable = false, updatable = false)
     private Integer salesRepEmployeeId;
 
     @Column(name = "credit_limit", columnDefinition = "DECIMAL")
