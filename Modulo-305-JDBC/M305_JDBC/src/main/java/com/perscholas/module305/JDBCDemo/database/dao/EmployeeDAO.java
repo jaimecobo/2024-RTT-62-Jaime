@@ -51,6 +51,18 @@ public class EmployeeDAO {
         session.close();
     }
 
+    public void deleteById(Integer id) {
+        SessionFactory factory = new Configuration().configure().buildSessionFactory();
+        Session session = factory.openSession();
+        session.getTransaction().begin();
+
+        // Added this line to be able to find the employee to delete
+        Employee employee = findById(id);
+        session.delete(employee);
+        session.getTransaction().commit();
+        session.close();
+    }
+
 
     public Employee findById(Integer id) {
         // these 2 lines of code prepare the hibernate session for use
