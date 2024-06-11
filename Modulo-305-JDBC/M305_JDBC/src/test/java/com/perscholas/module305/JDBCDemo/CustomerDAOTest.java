@@ -10,4 +10,19 @@ public class CustomerDAOTest {
 
     private CustomerDAO customerDAO =  new CustomerDAO();
 
+    @Test
+    public void findByIdTest(){
+        // Given
+        Integer userId = 103;
+
+        // When
+        Customer customer = customerDAO.findById(userId);
+
+        // Then
+        Assertions.assertNotNull(customer);
+        Assertions.assertEquals(userId, customer.getId());
+        Assertions.assertEquals("Atelier graphique", customer.getCustomerName());
+        Assertions.assertEquals("Schmitt", customer.getContactLastname());
+    }
+
 }
