@@ -3,6 +3,9 @@ package com.perscholas.module305.JDBCDemo.database.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
+
 @Setter
 @Getter
 @ToString
@@ -16,6 +19,10 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
+
+    @ToString.Exclude
+    @OneToMany(mappedBy = "product", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<OrderDetail> orderDetails;
 
     @Column(name = "product_code", nullable = false)
     private String productCode;
