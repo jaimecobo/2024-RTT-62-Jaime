@@ -36,4 +36,20 @@ public class EmployeeDAOTest {
 
     }
 
+    @Test
+    public void findByFirstNameTest(){
+        // Given
+        String firstName = "Diane";
+
+        // When
+        List<Employee> employees = employeeDAO.findByFirstName(firstName);
+
+        // Then
+        Assertions.assertNotNull(employees);
+        Assertions.assertEquals(1, employees.size());
+        Assertions.assertEquals("Murphy", employees.get(0).getLastname());
+        Assertions.assertEquals("dmurphy@classicmodelcars.com", employees.get(0).getEmail());
+
+    }
+
 }
