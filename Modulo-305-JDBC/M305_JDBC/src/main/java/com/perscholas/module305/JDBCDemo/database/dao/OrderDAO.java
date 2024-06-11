@@ -1,7 +1,6 @@
 package com.perscholas.module305.JDBCDemo.database.dao;
 
 import com.perscholas.module305.JDBCDemo.database.entity.Order;
-import com.perscholas.module305.JDBCDemo.database.entity.Product;
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.TypedQuery;
 import org.hibernate.Session;
@@ -12,6 +11,18 @@ import java.util.List;
 
 public class OrderDAO {
     SessionFactory factory = new Configuration().configure().buildSessionFactory();
+
+    void insert(Order order) {
+        Session session = factory.openSession();
+        session.getTransaction().begin();
+
+        // this is the only line that changed
+        session.save(order);
+
+        session.getTransaction().commit();
+        session.close();
+    }
+
 
     public void update(Order order) {
         Session session = factory.openSession();
