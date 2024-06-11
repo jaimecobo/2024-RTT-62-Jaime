@@ -10,6 +10,17 @@ public class CustomerDAOTest {
 
     private CustomerDAO customerDAO =  new CustomerDAO();
 
+    @BeforeAll
+    public static void beforeAll(){
+        // We could write some code to delete any customer from the database that has the "Test Customer" as the name
+
+        //Another example of something we could do here in the @BeforeAll
+        // If we were doing an old school JDBC connection we could create the actual database connection here
+        // so that all the methods in the test case already have a database connection they could use
+        // then in an @AfterAll you can close the database connection and release the resources
+
+    }
+
     @Test
     public void findByIdTest(){
         // Given
