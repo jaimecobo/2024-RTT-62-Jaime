@@ -39,4 +39,26 @@ public class CustomerDAOTest {
 
     }
 
+    @Test
+    public void createCustomerTest(){
+        // Given
+        Customer customerTest1 = new Customer();
+
+        customerTest1.setCustomerName("Test Customer");
+        customerTest1.setContactLastname("Last Name");
+        customerTest1.setContactFirstname("First Name");
+        customerTest1.setAddressLine1("Address 1");
+        customerTest1.setCity("Somewhere");
+        customerTest1.setCountry("USA");
+        customerTest1.setPhone("2342342345");
+
+        // When
+        customerDAO.insert(customerTest1);
+
+        // Then
+        Customer customerTest2 = customerDAO.findById(customerTest1.getId());
+        Assertions.assertEquals(customerTest1.getCustomerName(), customerTest2.getCustomerName());
+        Assertions.assertEquals(customerTest1.getContactFirstname(), customerTest2.getContactFirstname());
+
+    }
 }
