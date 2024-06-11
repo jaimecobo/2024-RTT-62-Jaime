@@ -25,4 +25,15 @@ public class EmployeeDAOTest {
 
     }
 
+    @Test
+    public void findByInvalidIdTest(){
+        // Given
+        Integer employeeId = 10021002;
+        // When
+        Employee employee = employeeDAO.findById(employeeId);
+        // Then
+        Assertions.assertNull(employee);
+
+    }
+
 }
