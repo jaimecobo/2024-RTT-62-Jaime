@@ -63,4 +63,29 @@ public class EmployeeDAOTest {
 
     }
 
+
+    @Test
+    public void createAndDeleteEmployeeTest(){
+        // Given
+        Employee given = new Employee();
+        given.setOfficeId(1);
+        given.setFirstname("Test Employee");
+        given.setLastname("LastName");
+        given.setEmail("test@classicmodels.com");
+        given.setExtension("x8081");
+        given.setJobTitle("Test_employee");
+
+        // When
+        employeeDAO.insert(given);
+
+        // Then
+        Employee actual = employeeDAO.findById(given.getId());
+        Assertions.assertEquals(given.getLastname(), actual.getLastname());
+        Assertions.assertEquals(given.getEmail(), actual.getEmail());
+
+        employeeDAO.delete(given);
+        Assertions.assertNull(employeeDAO.findById(actual.getId()));
+
+    }
+
 }
