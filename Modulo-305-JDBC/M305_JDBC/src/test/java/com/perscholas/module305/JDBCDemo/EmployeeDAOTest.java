@@ -2,7 +2,9 @@ package com.perscholas.module305.JDBCDemo;
 
 import com.perscholas.module305.JDBCDemo.database.dao.EmployeeDAO;
 import com.perscholas.module305.JDBCDemo.database.entity.Employee;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -10,6 +12,23 @@ import java.util.List;
 public class EmployeeDAOTest {
 
     private static EmployeeDAO employeeDAO = new EmployeeDAO();
+
+    @BeforeAll
+    public static void beforeAll(){
+        List<Employee> employees = employeeDAO.findByFirstName("Test Employee");
+        for(Employee employee : employees){
+            employeeDAO.deleteById(employee.getId());
+        }
+    }
+
+    @AfterAll
+    public  static  void afterAll(){
+        List<Employee> employees = employeeDAO.findByFirstName("Test Employee");
+        for(Employee employee : employees){
+            employeeDAO.deleteById(employee.getId());
+        }
+    }
+
 
         @Test
     public void findByIdTest(){
