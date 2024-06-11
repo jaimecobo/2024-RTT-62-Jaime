@@ -88,4 +88,15 @@ public class EmployeeDAOTest {
 
     }
 
+    @Test
+    public void deleteEmployeeByIdTest(){
+        // Given
+        Integer employeeId = 1718;
+        // When
+        employeeDAO.deleteById(employeeId);
+        // Then
+        Assertions.assertNull(employeeDAO.findById(employeeId));
+
+    }
+
 }
