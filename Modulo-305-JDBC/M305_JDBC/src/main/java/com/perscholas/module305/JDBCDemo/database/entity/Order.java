@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
+import java.util.List;
 
 @Setter
 @Getter
@@ -18,6 +19,10 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
+
+    @ToString.Exclude
+    @OneToMany(mappedBy = "order", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<OrderDetail> orderDetails;
 
     @ToString.Exclude
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
