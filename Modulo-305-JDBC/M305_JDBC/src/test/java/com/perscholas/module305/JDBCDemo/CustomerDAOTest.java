@@ -25,4 +25,18 @@ public class CustomerDAOTest {
         Assertions.assertEquals("Schmitt", customer.getContactLastname());
     }
 
+
+    @Test
+    public void findByInvalidIdTest(){
+        // Given
+        Integer userId = 103033;
+
+        // When
+        Customer customer = customerDAO.findById(userId);
+
+        // Then
+        Assertions.assertNull(customer);
+
+    }
+
 }
