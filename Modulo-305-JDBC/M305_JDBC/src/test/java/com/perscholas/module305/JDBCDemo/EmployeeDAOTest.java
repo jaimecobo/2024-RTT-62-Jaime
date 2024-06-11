@@ -52,4 +52,15 @@ public class EmployeeDAOTest {
 
     }
 
+    @Test
+    public void findByInvalidFirstNameTest(){
+        // Given
+        String firstName = "Ermenegildo";
+        // When
+        List<Employee> employeesByFirstName = employeeDAO.findByFirstName(firstName);
+        // Then
+        Assertions.assertEquals(0, employeesByFirstName.size());
+
+    }
+
 }
